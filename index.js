@@ -20,4 +20,7 @@ const driversByRevenue = function (drivers) {
 
 const driversByName = function (drivers) {
   return drivers.slice().sort(function(a, b){return a.name.localeCompare(b.name)})
+
+const totalRevenue = function(drivers) {
+  return drivers.reduce((total, amount) => total.revenue + amount.revenue)
 }
